@@ -1,4 +1,25 @@
+<<<<<<< Updated upstream
 Täällä ei oo mitään sitte juho vielä :D
+=======
+Welcome to EasyNotes!
+
+A few things in the beginning that should be mentioned.
+This project is still WIP.
+
+You will need NodeJS version 16.14 to run this.
+
+From Home-page you are able to navigate to 
+adding new courses or adding new notes.
+
+
+If you have more complicated problems, please
+contact our support at support@example.com.
+
+This project was build with svelte kit js
+After this you will have everything you need to know how to 
+build a Svelte project. 
+
+>>>>>>> Stashed changes
 
 # create-svelte
 
