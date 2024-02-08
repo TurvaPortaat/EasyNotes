@@ -7,6 +7,8 @@ A few things in the beginning that should be mentioned.
 This project is still WIP.
 
 You will need NodeJS version 16.14 to run this.
+!!! Make sure you are at the correct file when running npm run dev!!!
+The correct file /EasyNotes/EasyNotes
 
 From Home-page you are able to navigate to 
 adding new courses or adding new notes.
