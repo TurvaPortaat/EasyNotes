@@ -3,16 +3,17 @@
     //import {courseData} from '$lib/NoteStore.js'
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox, TableSearch } from 'flowbite-svelte';
     import AddNotes from './AddNotes.svelte';
-    import {notes} from '$lib/NoteStore.js';
-	import { json } from '@sveltejs/kit';
+    import {Notes} from '$lib/NoteStore.js';
+	  import { json } from '@sveltejs/kit';
+  
 
 </script>
 
 <select>
-    <option value={courseName}></option>
+    <!--<option value={courseName}></option>-->
 </select>
 
-<p><strong>Amount of all notes: ({$notes.length})</strong></p>
+<p><strong>Amount of all notes: ({$Notes.length})</strong></p>
 <Table striped={true} hoverable={true}>
     <TableHead>
       <TableHeadCell>NoteID</TableHeadCell>

@@ -23,15 +23,6 @@ createNotes();
 
 export const Notes = createNotes();  //named export
 
-//@ts-ignore
-let courseData = [
-    {courseID: 4, courseName: 'Data-analytiikka'}
-]
-
-//@ts-ignore
-let noteData = [
-    {noteID: 4, noteContent: 'Data-analytiikassa on paljon matikkaa.', timestamp: {Date} }
-]
 
 
 const getCourseData = async() => 
@@ -51,7 +42,6 @@ const getCourseData = async() =>
 
 getCourseData();
 
-
 const getNoteData = async () =>
 {
     const res2 = await fetch('https://luentomuistiinpano-api.netlify.app/.netlify/functions/notes');
@@ -64,10 +54,12 @@ const getNoteData = async () =>
     } else {
         throw new Error('No data found!');
     }
-    
+
+    // @ts-ignore
+    let noteDataA = [
+        {noteID:noteData.id, noteContent:noteData.text, 
+            courseID:noteData.course.id, courseName: noteData.course.name}
+    ];
 }
 
 getNoteData();
-
-
-

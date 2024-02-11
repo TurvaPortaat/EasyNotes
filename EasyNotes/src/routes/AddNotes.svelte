@@ -12,7 +12,8 @@
     function saveNote() {
         let note = {noteID,noteContent,courseID,courseName,timestamp};
 
-        notes = [...notes, note];
+        // @ts-ignore
+        const notes = [...notes, note];
         
     }
 </script>
