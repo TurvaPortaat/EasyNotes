@@ -1,24 +1,48 @@
 <script>
+    //import {noteData} from '$lib/NoteStore.js'
+    //import {courseData} from '$lib/NoteStore.js'
+    import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox, TableSearch } from 'flowbite-svelte';
+    import AddNotes from './AddNotes.svelte';
     import {notes} from '$lib/NoteStore.js';
-    import Note from './Note.svelte';
-    
-    async function getNotes(){
-        const res = await fetch('https//luentomuistiinpano-api.netlify.app/.netlify/functions/courses')
-        const data = await res.json();
-        courses: data;
-    
-        if(res.ok) {
-            return data;
-        } else {
-            throw new Error('No data found!');
-        }
-    }
+	import { json } from '@sveltejs/kit';
 
-    getNotes
 </script>
 
-<p><strong>Amount of all notes: ({$notes.length})</strong></p>
+<select>
+    <option value={courseName}></option>
+</select>
 
-{#each $notes as note}
-    <Note {...note} />
-{/each}
+<p><strong>Amount of all notes: ({$notes.length})</strong></p>
+<Table striped={true} hoverable={true}>
+    <TableHead>
+      <TableHeadCell>NoteID</TableHeadCell>
+      <TableHeadCell>NoteText</TableHeadCell>
+      <TableHeadCell>courseID</TableHeadCell>
+      <TableHeadCell>courseName</TableHeadCell>
+    </TableHead>
+    <TableBody>
+      <TableBodyRow>
+        <TableBodyCell>5</TableBodyCell>
+        <TableBodyCell>Olen esimerkki teksti</TableBodyCell>
+        <TableBodyCell>2</TableBodyCell>
+        <TableBodyCell>ruotsi</TableBodyCell>
+      </TableBodyRow>
+      <TableBodyRow>
+<!--
+        <TableBodyCell>{noteID}</TableBodyCell>
+        <TableBodyCell>{noteContent}</TableBodyCell>
+        <TableBodyCell>{courseID}</TableBodyCell>
+        <TableBodyCell>{courseName}</TableBodyCell>
+-->
+      </TableBodyRow>
+      <TableBodyRow>
+<!--
+        <TableBodyCell>{noteID}</TableBodyCell>
+        <TableBodyCell>{noteContent}</TableBodyCell>
+        <TableBodyCell>{courseID}</TableBodyCell>
+        <TableBodyCell>{courseName}</TableBodyCell>
+-->
+
+      </TableBodyRow>
+    </TableBody>
+  </Table>

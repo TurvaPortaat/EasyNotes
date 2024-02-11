@@ -5,7 +5,7 @@
 <main class="grid justify-evenly p-2 w-4/6 bg-gradient-to-br from-green-400 to-blue-400">
     <header class="flex space-x-6">
         <nav class="flex items-center hover:underline border w-min p-1.5 font-semibold">
-            <a class="p-1" href= "/home">Home</a>
+            <a class="p-1" href= "./">Home</a>
         </nav>
         <nav class="flex items-center text-center hover:underline border w-min p-1.5 font-semibold">
             <a class="p-1" href= "/addNotes">Add Notes</a>

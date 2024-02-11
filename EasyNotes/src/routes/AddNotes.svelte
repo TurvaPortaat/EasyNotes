@@ -1,22 +1,6 @@
 <script>
-    
-    import {notes} from "$lib/NoteStore.js"
-
-    let courseData = {
-        noteID: "0",
-        noteContent: "NoteText",
-        course: {
-            courseID: "00",
-            courseName: "EsimerkkiKurssi"
-        },
-        timestamp: "2022-11-24Y13:13:13"
-    };
-    let noteData = [
-        { ...courseData},
-        {noteID: "1", content: "abcdef", 
-        courseName: {courseID:"00", 
-        courseName: "EsimerkkiKurssi"}} 
-    ]
+    import {Notes} from "$lib/NoteStore.js"
+    export {Notes} //to "$lib/NoteStore.js"?;
 
     let noteID= 0;
     let noteContent ="";
@@ -28,13 +12,7 @@
     function saveNote() {
         let note = {noteID,noteContent,courseID,courseName,timestamp};
 
-        //notes = [...notes, note];
-        notes.add(note);
-        noteID = 0;
-        noteContent = "";
-        courseID = "";
-        courseName = "";
-        timestamp = 0;
+        notes = [...notes, note];
         
     }
 </script>

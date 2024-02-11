@@ -10,6 +10,38 @@ You will need NodeJS version 16.14 to run this.
 !!! Make sure you are at the correct file when running npm run dev!!!
 The correct file /EasyNotes/EasyNotes
 
+To use imported data I recommend usin Netlify adapter
+\bash
+npm i -D @sveltejs/adapter-netlify
+
+and add the adapter to your svelte.config.js:
+svelte.config.js
+import adapter from '@sveltejs/adapter-netlify';
+
+export default {
+    kit: {
+        //default options are shown
+        adapter: adapter({
+            //if true, will create a Netlify Edge Function rather
+            //than using starndard Node-based functions
+            edge: false,
+            
+            //if true, will split your app into multiple functions
+            //instead of creating a single one for the entire app.
+            //if 'edge' is true, this option cannot be used
+            split: false
+        })
+    }
+};
+
+I also decided to use Flowbite for svelte. 
+\bash
+pnpm i -D flowbite-svelte flowbite
+update also your tailwind.congif.cjs file
+like in https://flowbite-svelte.com/docs/pages/introduction
+
+
+Description what the app does:
 From Home-page you are able to navigate to 
 adding new courses or adding new notes.
 

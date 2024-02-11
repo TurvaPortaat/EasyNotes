@@ -1,5 +1,5 @@
 <script>
-    import AddNotes from "../AddNotes.svelte";
+    import AddNotes from "./AddNotes.svelte";
     
 </script>
 <main class=" w-4/6 p-6 bg-gradient-to-br from-green-400 to-blue-400">
